@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Мой сайт{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <a href="/main">
+                <img src="/static/logo.png" alt="" class="logo-img">
+            </a>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="/logout">Выйти</a></li>
+                <li><a href="/profile">мой профиль</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        {% block content %}
+        <!-- Контент страниц будет вставляться сюда -->
+        {% endblock %}
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© 2025 Онлайн экскурсия.</p>
+            <ul class="footer-links">
+            </ul>
+            <div class="social-media">
+                <a href="https://t.me/+b32sAvadw-wzMWFi" target="_blank">Telegram</a>
+                <a href="https://vk.com/club228651659" target="_blank">Vk</a>
+                <a href="https://chat.whatsapp.com/KSNJI6HdvdCJeIQqVnn28m" target="_blank">whatsapp</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

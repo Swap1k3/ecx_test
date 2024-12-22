@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Главная - Мой Сайт{% endblock %}
+
+{% block content %}
+<div class="form-container-profile">
+    <input type="text" id="username" name="username" value="{{ username }}" required disabled>
+    <input type="text" id="username" name="username" value="{{ email }}" required disabled>
+    <form id="delete-account-form" method="POST" action="/delete_account">
+        <button type="submit" class="delete-button">Удалить аккаунт</button>
+    </form>
+    <div class="hometext">
+        <a href="/main">вернуться на главную</a>
+    </div>
+</div>
+{% endblock %}
